@@ -122,7 +122,7 @@ app.delete("/api/productos/:id", async (req, res) => {
     if (result.affectedRows === 0) {
       return res.status(404).json({ message: "Producto no encontrado." });
     }
-    res.json({ message: "Producto eliminado correctamente." });
+    res.json({ message: "Producto eliminado con éxito desde AWS EC2." });
   } catch (err) {
     handleError(res, err, "No se pudo eliminar el Producto.");
   }
